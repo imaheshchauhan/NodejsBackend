@@ -22,6 +22,11 @@ const ratingSchema = mongoose.Schema(
       required: true,
       trim: true,
     },
+    movieId: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'Movie',
+    },
   },
   {
     timestamps: true,

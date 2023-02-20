@@ -13,7 +13,7 @@ router
 
 router
   .route('/:userEmail')
-  .get(auth('getUsers'), userController.getUser)
+  .get(userController.getUser)
   .patch(auth('manageUsers'), validate(userValidation.updateUser), userController.updateUser)
   .delete(auth('manageUsers'), validate(userValidation.deleteUser), userController.deleteUser);
 
